@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Registrazione";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Progetto_1.Models.Utente
+
+<h2>@ViewData["Title"]</h2>
+<p>Inserisci i tuoi dati all'interno dei campi sottostanti. I campi marcati con un <strong>*</strong> sono obbligatori</p>
+
+@Html.ValidationSummary()
+
+<table class="table">
+    <tr>
+        <td>Nome: <strong class="text-danger">*</strong></td>
+        <td>
+            <p>@Html.TextBoxFor(x => x.Nome)</p>
+        </td>
+    </tr>
+</table>
