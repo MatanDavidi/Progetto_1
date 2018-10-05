@@ -9,6 +9,7 @@ D:\Matan Davidi\Documents\Progetti Visual Studio\Progetto 1\Progetto 1\obj\Debug
 D:\Matan Davidi\Documents\Progetti Visual Studio\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.AssemblyInfo.cs
 D:\Matan Davidi\Documents\Progetti Visual Studio\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.dll
 D:\Matan Davidi\Documents\Progetti Visual Studio\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.pdb
+<<<<<<< HEAD
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.deps.json
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.runtimeconfig.json
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.runtimeconfig.dev.json
@@ -20,3 +21,16 @@ D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Proge
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.AssemblyInfo.cs
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.dll
 D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.pdb
+=======
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.deps.json
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.runtimeconfig.json
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.runtimeconfig.dev.json
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.dll
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Debug\netcoreapp2.0\Progetto 1.pdb
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.csprojAssemblyReference.cache
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.csproj.CoreCompileInputs.cache
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.AssemblyInfoInputs.cache
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.AssemblyInfo.cs
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.dll
+C:\Users\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Debug\netcoreapp2.0\Progetto 1.pdb
+>>>>>>> 6858b089917017aa9a937c6ab8a4c565dc7e4df4

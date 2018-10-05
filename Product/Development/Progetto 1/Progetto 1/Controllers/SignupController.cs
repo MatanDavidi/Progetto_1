@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Progetto_1.Models;
 
@@ -14,9 +15,13 @@ namespace Progetto_1.Controllers
             return View();
         }
 
-        public IActionResult Signup()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Signup(IFormCollection collection)
         {
-            return null;
+            Utente u = new Utente();
+            u.Nome = "bruce";
+            return View("Index", u);
         }
     }
 }
