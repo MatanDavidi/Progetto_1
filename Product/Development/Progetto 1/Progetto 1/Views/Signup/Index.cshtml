@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Progetto_1.Models.Utente
+@model Progetto_1.Models.User
 
 <h2>@ViewData["Title"]</h2>
 <p>Inserisci i tuoi dati all'interno dei campi sottostanti. I campi marcati con un <strong>*</strong> sono obbligatori</p>
@@ -15,7 +15,7 @@
     <tr>
         <td>Nome: <strong class="text-danger">*</strong></td>
         <td>
-            <p>@Html.TextBoxFor(x => x.Nome)</p>
+            <p>@Html.TextBoxFor(x => x.FirstName)</p>
         </td>
     </tr>
 </table>
