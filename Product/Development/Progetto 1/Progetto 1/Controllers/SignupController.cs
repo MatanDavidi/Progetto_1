@@ -11,9 +11,7 @@ namespace Progetto_1.Controllers
     {
         public IActionResult Index()
         {
-            Utente u = new Utente();
-            u.Nome = "Big shaq";
-            return View(u);
+            return View();
         }
 
         public IActionResult Signup()
