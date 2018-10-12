@@ -10,19 +10,15 @@
 <h4>Inserire i propri dati nei campi sottostanti e premere Registrazione per registrarsi.</h4>
 <h4>I campi marcati con un <strong class="text-danger">*</strong> sono obbligatori</h4>
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form asp-action="DataCheck">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label">Nome<strong class="text-danger">*</strong></label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label">Cognome<strong class="text-danger">*</strong></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Birthday" class="control-label">Data di nascita<strong class="text-danger">*</strong></label>
@@ -30,19 +26,9 @@
                 <span asp-validation-for="Birthday" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label">Indirizzo<strong class="text-danger">*</strong></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="CivicNumber" class="control-label">Numero civico<strong class="text-danger">*</strong></label>
                 <input asp-for="CivicNumber" class="form-control" />
                 <span asp-validation-for="CivicNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="City" class="control-label">Città<strong class="text-danger">*</strong></label>
-                <input asp-for="City" class="form-control" />
-                <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Nap" class="control-label">NAP<strong class="text-danger">*</strong></label>
@@ -50,24 +36,9 @@
                 <span asp-validation-for="Nap" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label">Numero di telefono<strong class="text-danger">*</strong></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label">E-mail<strong class="text-danger">*</strong></label>
+                <label asp-for="Email" class="control-label">Indirizzo e-mail<strong class="text-danger">*</strong></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label">Genere<strong class="text-danger">*</strong></label>
-                <input asp-for="Gender" class="form-control" />
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hobby" class="control-label">Hobby</label>
-                <input asp-for="Hobby" class="form-control" />
-                <span asp-validation-for="Hobby" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Job" class="control-label">Professione</label>
@@ -75,13 +46,46 @@
                 <span asp-validation-for="Job" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Registrazione" class="btn btn-default" />
+                <input type="submit" value="Registra" class="btn btn-default form-control" />
             </div>
-        </form>
-    </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">Cognome<strong class="text-danger">*</strong></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Indirizzo<strong class="text-danger">*</strong></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label">Città<strong class="text-danger">*</strong></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">Numero di telefono<strong class="text-danger">*</strong></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label">Genere<strong class="text-danger">*</strong></label>
+                <div class="dl-horizontal">
+                    <input type="radio" name="Gender" value="Maschio" class="col-md-4" checked > Maschio
+                    <input type="radio" name="Gender" value="Femmina" class="col-md-4" > Femmina
+                </div>
+                <span asp-validation-for="Gender" class="text-danger" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Hobby" class="control-label">Hobby</label>
+                <input asp-for="Hobby" class="form-control" />
+                <span asp-validation-for="Hobby" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" name="Azzera" value="Azzera" onclick="window.location.href = '@Url.Action("Clear", "Signup")';" class="btn btn-default form-control" />
+            </div>
+        </div>
+    </form>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
