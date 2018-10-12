@@ -84,5 +84,14 @@ namespace Progetto_1.Controllers
             ModelState.Clear();
             return View("Index");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Save(IFormCollection collection)
+        {
+            
+            User u = CollectionToUser(collection);
+            return View("Index");
+        }
     }
 }
