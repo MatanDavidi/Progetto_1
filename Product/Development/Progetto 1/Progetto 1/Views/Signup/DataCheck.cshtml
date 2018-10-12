@@ -10,8 +10,8 @@
 
 <div>
     <h4>Per favore, controlla di aver inserito i dati corretti.</h4>
-    <h4>Se volessi correggere uno o più valori, puoi tornare alla pagina di registrazione premendo il bottone "Correggi"</h4>
-    <h4>Altrimenti, prosegui con la registrazione premendo il bottone "Registrazione" </h4>
+    <h4>Se dovessi correggere uno o più valori, puoi tornare alla pagina di registrazione premendo il bottone "Correggi"</h4>
+    <h4>Altrimenti, prosegui con la registrazione premendo il bottone "Registra" </h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -88,7 +88,11 @@
         </dd>
     </dl>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+<div class="col-md-12">
+    <form asp-action="Save" class="col-md-6">
+        <input type="submit" value="Registra" class="btn btn-default navbar-btn" />
+    </form>
+    <form asp-action="Signup" class="col-md-6">
+        <input type="submit" value="Correggi" class="btn btn-default navbar-btn" />
+    </form>
 </div>
