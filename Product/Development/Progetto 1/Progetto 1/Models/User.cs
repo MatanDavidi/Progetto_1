@@ -57,7 +57,7 @@ namespace Progetto_1.Models
         [Display(Name = "Indirizzo e-mail")]
         public string Email { get; set; }
 
-        [Display(Name = "Genere")]
+        [Display(Name = "Sesso")]
         public string Gender { get; set; }
 
         [StringLength(500, ErrorMessage = "La lunghezza dell'hobby deve essere al massimo di 500 caratteri")]
