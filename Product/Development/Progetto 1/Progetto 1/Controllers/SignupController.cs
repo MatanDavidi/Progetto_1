@@ -13,19 +13,31 @@ namespace Progetto_1.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            User u = new User()
+            {
+                Address = "address",
+                Birthday = DateTime.Now,
+                City = "city",
+                CivicNumber = "12",
+                Email = "a@b.c",
+                FirstName = "firstName",
+                Gender = "m",
+                Hobby = "hobby",
+                Job = "job",
+                LastName = "lastName",
+                Nap = 6900,
+                PhoneNumber = "0123456789"
+            };
+            return View(u);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Index(IFormCollection collection)
+        public IActionResult Index(User u)
         {
-            User u = CollectionToUser(collection);
-            return View("Index");
+            return View("Index", u);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult DataCheck(IFormCollection collection)
         {
             if (ModelState.IsValid)
@@ -86,12 +98,37 @@ namespace Progetto_1.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Save(IFormCollection collection)
         {
-            
-            User u = CollectionToUser(collection);
-            return View("Index");
+            User user = CollectionToUser(collection);
+            try
+            {
+                CSVHelper all = new CSVHelper("wwwroot/Registrazioni/Registrazioni_tutte.csv", new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
+                CSVHelper day = new CSVHelper(string.Format("wwwroot/Registrazioni/Registrazioni_{0}_{1}_{2}.csv", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
+                string[] s = new string[]
+                {
+                    DateTime.Now.ToString(),
+                    user.FirstName,
+                    user.LastName,
+                    user.Birthday.ToString(),
+                    user.Address,
+                    user.CivicNumber,
+                    user.City,
+                    user.Nap.ToString(),
+                    user.PhoneNumber,
+                    user.Email,
+                    user.Gender,
+                    user.Hobby,
+                    user.Job
+                };
+                all.Write(s);
+                day.Write(s);
+                return View("Index", user);
+            }
+            catch (Exception e)
+            {
+                return View("Index", new User());
+            }
         }
     }
 }
