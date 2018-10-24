@@ -108,7 +108,7 @@ namespace Progetto_1.Controllers
 
                 return RedirectToAction("", "ReadCheck");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return View("Index");
             }
