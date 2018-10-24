@@ -1,0 +1,11 @@
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Release\netcoreapp2.0\Progetto 1.deps.json
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Release\netcoreapp2.0\Progetto 1.runtimeconfig.json
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Release\netcoreapp2.0\Progetto 1.runtimeconfig.dev.json
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Release\netcoreapp2.0\Progetto 1.dll
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\bin\Release\netcoreapp2.0\Progetto 1.pdb
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.csprojResolveAssemblyReference.cache
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.csproj.CoreCompileInputs.cache
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.AssemblyInfoInputs.cache
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.AssemblyInfo.cs
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.dll
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\obj\Release\netcoreapp2.0\Progetto 1.pdb
