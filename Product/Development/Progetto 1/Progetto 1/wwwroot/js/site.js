@@ -2,7 +2,7 @@
 
 //=====================SIGNUP=========================
 
-const BIRTHDAY_ERROR_MESSAGE = "La data di nascita deve essere compresa tra 100 anni fa ed oggi."
+const BIRTHDAY_ERROR_MESSAGE = "La data di nascita deve essere compresa tra 100 anni fa ed oggi.";
 
 $(".clear").click(function () {
 
@@ -16,7 +16,7 @@ $("#Birthday").on("blur", function () {
 
     var bDay = new Date($("#Birthday").val());
     var today = new Date();
-    var aHundredYearsAgo = new Date()
+    var aHundredYearsAgo = new Date();
     
     aHundredYearsAgo.setFullYear(today.getFullYear() - 100, aHundredYearsAgo.getMonth(), aHundredYearsAgo.getDate());
 
@@ -41,7 +41,6 @@ $("#Birthday").on("blur", function () {
         bDayInput.siblings("span").removeClass("field-validation-valid");
         bDayInput.siblings("span").text(BIRTHDAY_ERROR_MESSAGE);
         bDayInput.focus();
-        $(".saveForm").s
 
     }
 
