@@ -1,0 +1,102 @@
+﻿@model Progetto_1.Models.UserData
+
+@{
+    ViewData["Title"] = "Verifica di scrittura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Birthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CivicNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hobby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Birthday)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CivicNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Nap)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Hobby)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Job)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<form action="/" method="post">
+    <input type="submit" name="home" value="Ritorna alla pagina principale" class="btn btn-block btn-default" />
+</form>
