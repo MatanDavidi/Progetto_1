@@ -16,7 +16,7 @@
     <div>
         <form action="Save" method="post">
             <div>
-                <dl class="dl-horizontal col-md-12">
+                <dl class="dl-horizontal">
                     <dt>
                         @Html.DisplayNameFor(model => model.FirstName)
                     </dt>
@@ -104,13 +104,25 @@
                 </dl>
             </div>
             <div class="col-md-6">
-                <input type="submit" value="Registra" class="btn btn-default col-md-12" />
+                <input type="submit" value="Registra" class="btn btn-default form-control" />
             </div>
         </form>
-    </div>
-    <div class="col-md-6">
-        <form asp-action="Index" method="post">
-            <input type="submit" value="Correggi" class="btn btn-default col-md-12" />
-        </form>
+        <div class="col-md-6">
+            <form asp-action="Index" method="post">
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.LastName)
+                @Html.HiddenFor(model => model.Birthday)
+                @Html.HiddenFor(model => model.Address)
+                @Html.HiddenFor(model => model.CivicNumber)
+                @Html.HiddenFor(model => model.City)
+                @Html.HiddenFor(model => model.Nap)
+                @Html.HiddenFor(model => model.PhoneNumber)
+                @Html.HiddenFor(model => model.Email)
+                @Html.HiddenFor(model => model.Gender)
+                @Html.HiddenFor(model => model.Hobby)
+                @Html.HiddenFor(model => model.Job)
+                <input type="submit" value="Correggi" class="btn btn-default form-control" />
+            </form>
+        </div>
     </div>
 </div>
