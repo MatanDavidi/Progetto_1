@@ -13,27 +13,13 @@ namespace Progetto_1.Controllers
     {
         public IActionResult Index()
         {
-            User u = new User()
-            {
-                Address = "address",
-                Birthday = DateTime.Now,
-                City = "city",
-                CivicNumber = "12",
-                Email = "a@b.c",
-                FirstName = "firstName",
-                Gender = "m",
-                Hobby = "hobby",
-                Job = "job",
-                LastName = "lastName",
-                Nap = 6900,
-                PhoneNumber = "0123456789"
-            };
-            return View(u);
+            return View();
         }
 
         [HttpPost]
-        public IActionResult Index(User u)
+        public IActionResult Index(IFormCollection collection)
         {
+            User u = CollectionToUser(collection);
             return View("Index", u);
         }
 
@@ -43,8 +29,9 @@ namespace Progetto_1.Controllers
             if (ModelState.IsValid)
             {
                 User u = CollectionToUser(collection);
-
                 return View("DataCheck", u);
+
+
             }
             else
             {
@@ -78,7 +65,7 @@ namespace Progetto_1.Controllers
                 Email = email.FirstOrDefault(),
                 Gender = gender.FirstOrDefault(),
                 Hobby = hobby.FirstOrDefault(),
-                Job = hobby.FirstOrDefault(),
+                Job = job.FirstOrDefault(),
             };
 
             DateTime bd = new DateTime();
@@ -91,23 +78,18 @@ namespace Progetto_1.Controllers
             return u;
         }
 
-        public IActionResult Clear()
-        {
-            ModelState.Clear();
-            return View("Index");
-        }
-
         [HttpPost]
         public IActionResult Save(IFormCollection collection)
         {
             User user = CollectionToUser(collection);
             try
             {
-                CSVHelper all = new CSVHelper("wwwroot/Registrazioni/Registrazioni_tutte.csv", new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
-                CSVHelper day = new CSVHelper(string.Format("wwwroot/Registrazioni/Registrazioni_{0}_{1}_{2}.csv", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day), new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
+                DateTime dt = DateTime.Now;
+                CSVHelper all = new CSVHelper("wwwroot/Registrazioni/Registrazioni_tutte.csv", ";", new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
+                CSVHelper day = new CSVHelper(string.Format("wwwroot/Registrazioni/Registrazioni_{0}_{1}_{2}.csv", dt.Year, dt.Month, dt.Day), ";", new string[] { "data", "nome", "cognome", "data_nascita", "via", "numero_civico", "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
                 string[] s = new string[]
                 {
-                    DateTime.Now.ToString(),
+                    dt.ToString(),
                     user.FirstName,
                     user.LastName,
                     user.Birthday.ToString(),
@@ -123,11 +105,12 @@ namespace Progetto_1.Controllers
                 };
                 all.Write(s);
                 day.Write(s);
-                return View("Index", user);
+
+                return RedirectToAction("", "ReadCheck");
             }
             catch (Exception e)
             {
-                return View("Index", new User());
+                return View("Index");
             }
         }
     }
