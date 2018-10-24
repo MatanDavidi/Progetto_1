@@ -1,0 +1,15 @@
+D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=Progetto 1
+--content-root=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Home\About.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Home\Contact.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Home\Index.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\ReadCheck\Index.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Shared\Error.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Shared\_Layout.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Signup\DataCheck.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\Signup\Index.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\_ViewImports.cshtml
+--file=D:\Matan Davidi\Documents\GitHub\Progetto_1\Product\Development\Progetto 1\Progetto 1\Views\_ViewStart.cshtml
