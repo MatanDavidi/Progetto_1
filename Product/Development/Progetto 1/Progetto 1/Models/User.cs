@@ -83,5 +83,28 @@ namespace Progetto_1.Models
         [RegularExpression("^((?![;[\\]{}<>\\\\]).)*$", ErrorMessage = "La professione contiene caratteri non consentiti")]
         public string Job { get; set; }
         #endregion
+
+        #region =================== costruttori ================
+        public User(string[] values)
+        {
+            FirstName = values.ElementAtOrDefault(1);
+            LastName = values.ElementAtOrDefault(2);
+            Birthday = DateTime.Parse(values.ElementAtOrDefault(3));
+            Address = values.ElementAtOrDefault(4);
+            CivicNumber = values.ElementAtOrDefault(5);
+            City = values.ElementAtOrDefault(6);
+            Nap = int.Parse(values.ElementAtOrDefault(7));
+            PhoneNumber = values.ElementAtOrDefault(8);
+            Email = values.ElementAtOrDefault(9);
+            Gender = values.ElementAtOrDefault(10);
+            Hobby = values.ElementAtOrDefault(11);
+            Job = values.LastOrDefault();
+        }
+
+        public User()
+        {
+
+        }
+        #endregion
     }
 }
