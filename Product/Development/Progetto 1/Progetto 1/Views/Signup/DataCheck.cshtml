@@ -14,99 +14,82 @@
     <h4>Altrimenti, prosegui con la registrazione premendo il bottone "Registra" </h4>
     <hr />
     <div>
-        <form action="Save" method="post">
-            <div>
-                <dl class="dl-horizontal">
-                    <dt>
-                        @Html.DisplayNameFor(model => model.FirstName)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.FirstName)
-                        @Html.HiddenFor(model => model.FirstName)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.LastName)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.LastName)
-                        @Html.HiddenFor(model => model.LastName)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Birthday)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Birthday)
-                        @Html.HiddenFor(model => model.Birthday)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Address)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Address)
-                        @Html.HiddenFor(model => model.Address)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.CivicNumber)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.CivicNumber)
-                        @Html.HiddenFor(model => model.CivicNumber)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.City)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.City)
-                        @Html.HiddenFor(model => model.City)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Nap)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Nap)
-                        @Html.HiddenFor(model => model.Nap)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.PhoneNumber)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.PhoneNumber)
-                        @Html.HiddenFor(model => model.PhoneNumber)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Email)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Email)
-                        @Html.HiddenFor(model => model.Email)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Gender)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Gender)
-                        @Html.HiddenFor(model => model.Gender)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Hobby)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Hobby)
-                        @Html.HiddenFor(model => model.Hobby)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Job)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Job)
-                        @Html.HiddenFor(model => model.Job)
-                    </dd>
-                </dl>
-            </div>
-            <div class="col-md-6">
-                <input type="submit" value="Registra" class="btn btn-default form-control" />
-            </div>
-        </form>
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Birthday)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Birthday)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CivicNumber)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CivicNumber)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nap)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nap)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hobby)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Hobby)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Job)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Job)
+                </dd>
+            </dl>
+        </div>
         <div class="col-md-6">
             <form asp-action="Index" method="post">
                 @Html.HiddenFor(model => model.FirstName)
@@ -122,6 +105,23 @@
                 @Html.HiddenFor(model => model.Hobby)
                 @Html.HiddenFor(model => model.Job)
                 <input type="submit" value="Correggi" class="btn btn-default form-control" />
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form action="Save" method="post">
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.LastName)
+                @Html.HiddenFor(model => model.Birthday)
+                @Html.HiddenFor(model => model.Address)
+                @Html.HiddenFor(model => model.CivicNumber)
+                @Html.HiddenFor(model => model.City)
+                @Html.HiddenFor(model => model.Nap)
+                @Html.HiddenFor(model => model.PhoneNumber)
+                @Html.HiddenFor(model => model.Email)
+                @Html.HiddenFor(model => model.Gender)
+                @Html.HiddenFor(model => model.Hobby)
+                @Html.HiddenFor(model => model.Job)
+                <input type="submit" value="Registra" class="btn btn-default form-control" />
             </form>
         </div>
     </div>
