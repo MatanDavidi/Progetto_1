@@ -10,6 +10,13 @@ $(".clear").click(function () {
     $(".radio-inline").first().prop("checked", true);
     $(".radio-inline").last().removeAttr("checked");
 
+    bDayInput.addClass("valid");
+    bDayInput.removeClass("input-validation-error");
+    bDayInput.prop("aria-invalid", false);
+    bDayInput.siblings("span").removeClass("field-validation-error");
+    bDayInput.siblings("span").addClass("field-validation-valid");
+    bDayInput.siblings("span").children("span").text("");
+
 });
 
 $("#Birthday").on("blur", function () {
@@ -40,7 +47,6 @@ $("#Birthday").on("blur", function () {
         bDayInput.siblings("span").addClass("field-validation-error");
         bDayInput.siblings("span").removeClass("field-validation-valid");
         bDayInput.siblings("span").text(BIRTHDAY_ERROR_MESSAGE);
-        bDayInput.focus();
 
     }
 
