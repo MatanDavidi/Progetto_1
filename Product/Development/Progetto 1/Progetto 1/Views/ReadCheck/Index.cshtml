@@ -1,4 +1,4 @@
-﻿@model Progetto_1.Models.UserData
+﻿@model IEnumerable<Progetto_1.Models.User>
 
 @{
     ViewData["Title"] = "Verifica di scrittura";
@@ -7,96 +7,96 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Birthday)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CivicNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nap)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hobby)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Job)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Birthday)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.CivicNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.City)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Nap)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Hobby)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.Job)
-            </td>
-        </tr>
-    </tbody>
-</table>
+<p class="text-justify">Grazie per esserti registrato</p>
+<p class="text-justify">Premi il pulsante in basso per tornare alla pagina principale</p>
 
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Birthday)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CivicNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nap)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hobby)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Job)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.FirstName)">
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.LastName)">
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Birthday)">
+                        @Html.DisplayFor(modelItem => item.Birthday)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Address)">
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.CivicNumber)">
+                        @Html.DisplayFor(modelItem => item.CivicNumber)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.City)">
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Nap)">
+                        @Html.DisplayFor(modelItem => item.Nap)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.PhoneNumber)">
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayTextFor(modelItem => item.Email)">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Gender)">
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Hobby)">
+                        @Html.DisplayFor(modelItem => item.Hobby)
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="@Html.DisplayFor(modelItem => item.Job)">
+                        @Html.DisplayFor(modelItem => item.Job)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 <form action="/" method="post">
     <input type="submit" name="home" value="Ritorna alla pagina principale" class="btn btn-block btn-default" />
 </form>
