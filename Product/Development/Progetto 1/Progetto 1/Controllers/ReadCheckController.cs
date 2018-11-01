@@ -18,8 +18,14 @@ namespace Progetto_1.Controllers
                 new string[] {
                     "data", "nome", "cognome", "data_nascita", "via", "numero_civico",
                     "citta", "nap", "telefono", "email", "sesso", "hobby", "professione" });
-            UserData model = new UserData(csv.ReadAllLines().LastOrDefault());
-            return View(model);
+            List<User> users = new List<User>();
+            for (int i = 1; i < csv.ReadAllLines().Count; ++i)
+            {
+                User u = new User(csv.ReadAllLines().ElementAt(i));
+                users.Add(u);
+            }
+
+            return View(users.AsEnumerable());
         }
     }
 }
