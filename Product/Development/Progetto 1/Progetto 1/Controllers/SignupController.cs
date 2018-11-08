@@ -30,8 +30,6 @@ namespace Progetto_1.Controllers
             {
                 User u = CollectionToUser(collection);
                 return View("DataCheck", u);
-
-
             }
             else
             {
