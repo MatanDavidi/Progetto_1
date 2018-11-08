@@ -72,6 +72,12 @@ namespace Progetto_1.Models
 
         }
 
+        /// <summary>
+        /// Creates a new instance of the CSVHelper class using the default Unicode encoding
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="separator"></param>
+        /// <param name="columns"></param>
         public CSVHelper(string path, string separator, string[] columns) : this(path, separator, columns, Encoding.Unicode)
         {
 
