@@ -59,7 +59,7 @@ namespace Progetto_1.Models
         [Required(ErrorMessage = "Inserire un numero di telefono")]
         [Display(Name = "Numero di telefono")]
         [DataType(DataType.PhoneNumber)]
-        [StringLength(50, ErrorMessage = "La lunghezza del numero di telefono deve essere compresa tra 10 e 50 caratteri", MinimumLength = 10)]
+        [StringLength(50, ErrorMessage = "La lunghezza del numero di telefono deve essere compresa tra 8 e 50 caratteri", MinimumLength = 8)]
         [RegularExpression("^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$", ErrorMessage = "Il numero di telefono inserito è in un formato non riconosciuto")]
         [Phone(ErrorMessage = "Il numero di telefono inserito è in un formato non riconosciuto")]
         public string PhoneNumber { get; set; }
